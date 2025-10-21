@@ -1,0 +1,86 @@
+.section-title {
+  margin-top: 150px;
+  text-align: center;
+  color: var(--accent);
+  font-size: 35px; /* or var(--h2-font) if you prefer */
+  margin-bottom: 60px; /* optional, for spacing below title */
+}
+
+.skills {
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.products > .skill,
+.products > .skill1 {
+  flex: 0 1 calc(33.333% - 1.5rem);
+  max-width: 300px;
+  padding: 1.5rem 1rem;
+  border: 0.15rem solid var(--accent);
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.skill1 {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.skill i,
+.skill1 i,
+.skill img,
+.skill1 img {
+  font-size: 2.2rem;
+  width: 32px;
+  height: 32px;
+  margin: 0.5rem 0;
+}
+
+.skill p,
+.skill1 p {
+  margin: 0.5rem 0 0;
+  line-height: 1.4;
+}
+
+.skill:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: scale(1.05);
+  box-shadow: var(--neon-box-shadow);
+}
+
+.skill1:hover {
+  background: transparent;
+  color: var(--accent);
+  transform: scale(1.05);
+  box-shadow: var(--neon-box-shadow);
+}
+
+
+@media (max-width: 900px) {
+  .skills > .skill,
+  .skills > .skill1 {
+    flex: 0 1 calc(50% - 1.5rem);  
+  }
+}
+
+@media (max-width: 600px) {
+  .skills > .skill,
+  .skills > .skill1 {
+    flex: 0 1 100%;  
+  }
+}

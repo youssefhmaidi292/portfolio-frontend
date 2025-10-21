@@ -1,0 +1,93 @@
+.services {
+  margin-top: 150px;
+  text-align: center;
+  margin-bottom: 120px;
+}
+.section-title {
+  margin-top: 150px;
+  text-align: center;
+  color: var(--accent);
+  font-size: 35px; 
+  margin-bottom: 60px; 
+}
+.ser1 h1{
+  margin-top: 60px;
+  text-align: center;
+  color: var(--accent);
+}
+
+.mySwiper {
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px 0;
+  margin: 60px;
+}
+
+.ser1 {
+  background-color: var(--box-color);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--hover-color);
+  color: var(--main-text-color);
+  text-align: center;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.ser1 i {
+  font-size: 30px;
+  margin-bottom: 15px;
+  display: block;
+  color: var(--text);
+}
+
+.ser1 h1 {
+  margin-bottom: 10px;
+}
+
+.ser1 p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+
+.swiper-pagination-bullet {
+  background: var(--hover-color);
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--hover-color);  
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.swiper-pagination {
+  bottom: -50px !important;  
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 0.7;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .mySwiper {
+    width: 100%;
+  }}

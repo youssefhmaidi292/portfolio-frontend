@@ -1,0 +1,39 @@
+:root {
+  --text: #f2f2f2;
+  --bg: #0b192c;
+  --second-bg: hsl(212, 53%, 25%);
+  --accent: #00ced1;
+  --accent-glow: rgba(0, 206, 209, 0.3);
+
+  --big-font: 2.5rem;
+  --normal-font: 1.25rem;
+  --h2-font: 3rem;
+
+  --neon-box-shadow: 0 0 .5rem var(--accent);
+  --font-neon-text-shadow:
+    0 0 10px var(--accent-glow),
+    0 0 20px var(--accent-glow),
+    0 0 30px var(--accent-glow),
+    0 0 40px var(--accent-glow),
+    0 0 70px var(--accent-glow),
+    0 0 80px var(--accent-glow),
+    0 0 100px var(--accent-glow),
+    0 0 150px var(--accent-glow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .letter,
+  .circle::before,
+  .circle::after {
+    animation: none !important;
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--bg);
+}

@@ -1,0 +1,111 @@
+.nav {
+  position: static;                 
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 5%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(30, 62, 98, 0.75); 
+  backdrop-filter: blur(10px);
+  border-radius:  20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+  z-index: 1000000000;
+  margin-top: 20px;
+}
+
+.lg {
+  height: 90px;           
+  width: auto;
+  display: block;
+  z-index: 1;
+  margin-top: 8px;
+}
+
+.nav1 {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav1 a {
+  position: relative;
+  color: var(--text);
+  font-weight: 500;
+  padding: 8px 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav1 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav1 a:hover {
+  color: var(--accent);
+}
+.nav1 a:hover::after {
+  width: 100%;
+}
+
+.ic1 {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--accent);
+  background: transparent;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  padding: 0.35rem 0.6rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.ic1:hover {
+  background: var(--accent);
+  color: var(--second-bg);
+}
+
+@media (max-width: 768px) {
+  .ic1 {
+    display: block;          
+  }
+
+  .nav1 {
+    position: absolute;
+    top: 80px;              
+    right: 5%;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(30, 62, 98, 0.95);
+    backdrop-filter: blur(10px);
+    width: 200px;
+    padding: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(-150%); 
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .nav.nav--open .nav1 {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav1 a {
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+}

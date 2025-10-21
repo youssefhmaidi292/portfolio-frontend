@@ -3,7 +3,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { toast } from 'react-toastify';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import '../styles/contact.css';
+import '../styles/Contact.css';
 
 function Contact() {
   const recaptchaRef = useRef(null);

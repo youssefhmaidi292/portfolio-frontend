@@ -11,7 +11,6 @@ import socialmed1 from '../port/socialmed1.png'
 import socialmed2 from '../port/socialmed2.png'
 import socialmed3 from '../port/socialmed3.png'
 import logo1 from '../port/logo1.png'
-import logo2 from '../port/logo2.png'
 import logo3 from '../port/logo3.png'
 import logo4 from '../port/logo4.png'
 import buscard1 from '../port/buscard1.png'
@@ -85,7 +84,7 @@ function Portfolio() {
       title: "Logo Design",
       description: "These logo designs represent different creative directions I explored for the project. Each one reflects the brand's identity through unique shapes, colors, and typography. I aimed to create logos that are simple, memorable, and adaptable across different uses like print, web, and social media.",
       stack: "Adobe Illustrator, Canva",
-      images: [logo1, logo2, logo3, logo4],
+      images: [logo1,  logo3, logo4],
       projectType: "design",
       behanceLink: BEHANCE_PROFILE_LINK
     },

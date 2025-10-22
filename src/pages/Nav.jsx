@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react';
 import '../styles/Nav.css';
-import { useState } from 'react';
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
+import { Link } from 'react-router-dom';
 
 function Nav() {
   const [open, setOpen] = useState(false);
@@ -12,15 +12,15 @@ function Nav() {
         <div className='di12'></div>
         <img className='lg' src={logo} alt="logo" />
       </div>
-      <ul className="nav1">
-  <li><a href="#home">home</a></li>
-  <li><a href="#about">about</a></li>
-  <li><a href="#services">services</a></li>
-  <li><a href="#skills">skills</a></li>
-  <li><a href="#portfolio">portfolio</a></li>
-  <li><a href="#contact">contact</a></li>
-</ul>
 
+      <ul className="nav1">
+        <li><Link to="/">home</Link></li>
+        <li><Link to="/about">about</Link></li>
+        <li><Link to="/services">services</Link></li>
+        <li><Link to="/skills">skills</Link></li>
+        <li><Link to="/portfolio">portfolio</Link></li>
+        <li><Link to="/contact">contact</Link></li>
+      </ul>
 
       <div className="ic1" onClick={() => setOpen(!open)}>
         <i className={`fa-solid ${open ? 'fa-times' : 'fa-bars'}`}></i>
@@ -29,4 +29,4 @@ function Nav() {
   );
 }
 
-export default Nav
+export default Nav;

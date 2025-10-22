@@ -25,11 +25,11 @@ function Contact() {
     setCaptchaError(false);
 
     try {
-      const res = await fetch('https://portfolio-backend-nequ.onrender.com/contact', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(form)
-});
+      const res = await fetch('https://portfolio-backend-nequ.onrender.com/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, captcha: captchaValue }) 
+      });
 
       if (!res.ok) {
         const { error } = await res.json();
@@ -76,12 +76,12 @@ function Contact() {
 
         <div className="phone-container">
           <PhoneInput
-            country={'us'} 
+            country={'us'}
             value={form.phone}
             onChange={phone => setForm({ ...form, phone })}
-            enableSearch={true}      
-            disableCountryCode={false} 
-            countryCodeEditable={false} 
+            enableSearch={true}
+            disableCountryCode={false}
+            countryCodeEditable={false}
             inputProps={{
               name: 'phone',
               required: true,

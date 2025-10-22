@@ -13,13 +13,14 @@ function Nav() {
         <img className='lg' src={logo} alt="logo" />
       </div>
       <ul className="nav1">
-        <li><a href="/">home</a></li>
-        <li><a href="/about">about</a></li>
-        <li><a href="/services">services</a></li>
-        <li><a href="/skills">skills</a></li>
-        <li><a href="/portfolio">portfolio</a></li>
-        <li><a href="/contact">contact</a></li>
-      </ul>
+  <li><a href="#home">home</a></li>
+  <li><a href="#about">about</a></li>
+  <li><a href="#services">services</a></li>
+  <li><a href="#skills">skills</a></li>
+  <li><a href="#portfolio">portfolio</a></li>
+  <li><a href="#contact">contact</a></li>
+</ul>
+
 
       <div className="ic1" onClick={() => setOpen(!open)}>
         <i className={`fa-solid ${open ? 'fa-times' : 'fa-bars'}`}></i>
